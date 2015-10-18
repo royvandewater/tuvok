@@ -1,2 +1,2 @@
-# vulcanhealthcheck
+# tuvok
 Healthcheck for vulcan sidekicks
