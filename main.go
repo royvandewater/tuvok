@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/codegangsta/cli"
+	"github.com/royvandewater/vulcanhealthcheck/healthchecker"
 )
 
 func main() {
@@ -14,9 +15,10 @@ func main() {
 }
 
 func healthcheck(context *cli.Context) {
+	checker := new(healthchecker.Healthchecker)
 	for {
-		// healthy, err := Healthcheck()
-		// panicIfError(err)
+		_, err := checker.Check()
+		panicIfError(err)
 		//
 		// if !healthy {
 		// 	err = Unregister()
